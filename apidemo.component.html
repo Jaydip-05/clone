@@ -1,0 +1,26 @@
+<p>apidemo works!</p>
+
+<div class="row text-center">
+    <div class="col-4 ">
+        <button class="btn btn-primary" (click)="getalluser()">Call API</button>
+    </div>
+    <div class="col-3">
+        <select class="form-select">
+            @for (item of userList; track $index){
+                <option>{{item.name}}</option>
+            }
+          
+        </select>
+
+      
+    </div>
+    <div class="col-3"  >
+        <button class="btn btn-danger" (click)="getfact()">Get Facts</button>
+       
+        @for (item of facts; track $index){
+           <li>{{item.sname | json}}</li>
+        }
+
+        <!-- <p>{{facts.text | json }}</p> -->
+    </div>
+</div>
